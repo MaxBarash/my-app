@@ -4,7 +4,6 @@ import ToDoForm from "./ToDoForm"
 
 function App() {
    const [todos, setTodos] = useState([])
-    console.log(todos)
 
    const addTask = (userInput) => {
       if (userInput) {
