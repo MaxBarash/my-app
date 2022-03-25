@@ -1,6 +1,7 @@
 import { useState } from "react"
 import ToDo from "./ToDo"
 import ToDoForm from "./ToDoForm"
+import RandomGif from "./RandomGif"
 
 function App() {
    const [todos, setTodos] = useState([])
@@ -44,6 +45,8 @@ function App() {
                />
             )
          })}
+
+      <RandomGif tag="cat" />
       </div>
    );
 }
