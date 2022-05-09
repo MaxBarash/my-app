@@ -1,7 +1,23 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 function ToDoForm({ addTask }) {
    const [userInput, setUserInput] = useState("")
+
+
+
+   // useEffect(() => {
+   //    const userInput = JSON.parse(localStorage.getItem('userInput'));
+   //    return userInput ? JSON.parse(userInput) : []
+   // },[])
+
+   // const localDate = localStorage, getItem('userInput');
+   // return localDate
+   //    ? JSON.parse(userInput)
+   //    : []
+
+   // useEffect(() => {
+   //    localStorage.setItem('userInput', JSON.stringify(userInput))
+   // }, [userInput]);
 
    const handleChange = (e) => {
       setUserInput(e.currentTarget.value)

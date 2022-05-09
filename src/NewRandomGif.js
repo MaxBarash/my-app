@@ -2,9 +2,9 @@ import React from "react";
 import { useState, useEffect } from "react";
 import giphyRandom from "giphy-random";
 
-const API_KEY = "yjnNske5FbN6ldwOFNf3zz6zlJTPQzWY";
+const API_KEY = '1hREzybDQiam04aa2a6Argpold5s532V';
 
-const RandomGif = ({ tag }) => {
+const NewRandomGif = ({ tag }) => {
    const [giphyUrl, setGiphyUrl] = useState();
 
    useEffect(() => {
@@ -14,29 +14,28 @@ const RandomGif = ({ tag }) => {
                tag,
             });
 
+
             if (data) {
-               setGiphyUrl(data.images.downsized_medium.url);
+               setGiphyUrl(data.images.downsized_medium.url)
             }
          } catch (error) {
-            console.log('Поймал ошибку', error)
+            console.log('Ошибка!!', error)
          }
-
       };
-
       getGiphyUrl();
    }, [tag]);
 
    return (
-      <div style={{ position: "absolute", bottom: "20px", left: "20px" }}>
+      <div style={{ position: 'absolute', bottom: '20px', left: '240px' }} >
          {giphyUrl && (
             <img
                src={giphyUrl}
-               alt="gif"
-               style={{ maxWidth: 200, maxHeight: 200 }}
+               alt='gif'
+               style={{ maxWidth: 200, maxHeigth: 200 }}
             />
          )}
       </div>
    );
 };
 
-export default RandomGif;
+export default NewRandomGif;
