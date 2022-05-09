@@ -10,11 +10,7 @@ const NewRandomGif = ({ tag }) => {
    useEffect(() => {
       const getGiphyUrl = async () => {
          try {
-            const { data } = await giphyRandom(API_KEY, {
-               tag,
-            });
-
-
+            const { data } = await giphyRandom(API_KEY, { tag, });
             if (data) {
                setGiphyUrl(data.images.downsized_medium.url)
             }

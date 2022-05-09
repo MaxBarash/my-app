@@ -64,7 +64,8 @@ function App() {
          })}
 
          <RandomGif tag="dog" />
-         <NewRandomGif tag='dance' />
+         <NewRandomGif tag="cat" />
+
          {/* <RandomGif tag='cat' /> */}
       </div>
    );
