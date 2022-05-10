@@ -63,10 +63,9 @@ function App() {
             )
          })}
 
-         <RandomGif tag="dog" />
-         <NewRandomGif tag="cat" />
+         {/* <RandomGif tag="dog" /> */}
+         <NewRandomGif tag="cat" tag2="dog" />
 
-         {/* <RandomGif tag='cat' /> */}
       </div>
    );
 }
