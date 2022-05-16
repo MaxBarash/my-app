@@ -65,7 +65,7 @@ function App() {
 
          {/* <RandomGif tag="dog" /> */}
          <NewRandomGif tag="cat" tag2="dog" />
-
+         <button className="btn" onClick={() => NewRandomGif(document.location.reload())}>Reload this gif</button>
       </div>
    );
 }

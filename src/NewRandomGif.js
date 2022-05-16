@@ -11,10 +11,10 @@ const NewRandomGif = ({ tag, tag2 }) => {
    useEffect(() => {
       const getGiphyUrl = async () => {
          try {
-            const response = await giphyRandom(API_KEY, { tag, });
-            const response2 = await giphyRandom(API_KEY, { tag: tag2, });
-            const data = response.data;
-            const data2 = response2.data;
+            const firstResponse = await giphyRandom(API_KEY, { tag, });
+            const secondResponse = await giphyRandom(API_KEY, { tag: tag2, });
+            const data = firstResponse.data;
+            const data2 = secondResponse.data;
             if (data) {
                setGiphyUrl(data.images.downsized.url)
             }
@@ -29,7 +29,7 @@ const NewRandomGif = ({ tag, tag2 }) => {
    }, [tag]);
 
    return (
-      <div style={{ position: 'absolute', bottom: '20px', left: '240px' }} >
+      <div style={{ position: 'absolute', bottom: '20px', left: '10px' }} >
          {giphyUrl && (
             <img
                src={giphyUrl}
